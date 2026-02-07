@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Compiled binaries
+*.o
+*.out
+vuln_parser
+
+# Temporary files
+*.tmp
+*.log
+poc_demo_output.txt
+
+# Editor files
+.vscode/
+*.swp
+*~
+
+# OS files
+.DS_Store
