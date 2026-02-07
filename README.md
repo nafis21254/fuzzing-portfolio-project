@@ -153,11 +153,7 @@ if (len >= 64) len = 63;  // Truncate to fit
 - **GDB** - Debugging and forensics
 - **Git** - Version control
 
-## 📞 Contact
 
-**LinkedIn:** [Your LinkedIn]  
-**GitHub:** [Your GitHub]  
-**Email:** [Your Email]
 
 ---
 
