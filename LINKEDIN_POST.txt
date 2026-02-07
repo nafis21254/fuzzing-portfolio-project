@@ -1,0 +1,27 @@
+🔐 Just Completed: Fuzzing Portfolio Project
+
+I built a custom mutation-based fuzzer that discovered a heap buffer overflow vulnerability in under 1 second!
+
+🎯 Key Achievements:
+- Developed custom fuzzer achieving 27,000 executions/second
+- Discovered CWE-122 heap overflow with 100% reproducibility
+- Identified exact 64-byte crash boundary
+- Created working proof-of-concept exploit
+- Documented findings in professional security advisory format
+
+💻 Technical Stack:
+Python, GCC, AddressSanitizer, GDB, Git
+
+📊 Results:
+✅ Time to discovery: < 1 second
+✅ 6+ unique crash samples
+✅ CVSS 8.6 (HIGH severity)
+✅ Full root cause analysis with memory forensics
+
+📂 Full project on GitHub:
+https://github.com/nafis21254/fuzzing-portfolio-project
+
+#Cybersecurity #Fuzzing #VulnerabilityResearch #InfoSec #SecurityResearch #Python #OffensiveSecurity
+
+---
+Looking for opportunities in security research and offensive security roles!

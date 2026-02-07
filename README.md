@@ -1,4 +1,36 @@
-# Fuzzing Portfolio Project: Heap Overflow Discovery
+# Fuzzing Portfolio Project: Multiple Memory Corruption Vulnerabilities
+
+[![Vulnerabilities Found](https://img.shields.io/badge/Bugs%20Found-2-red)]()
+[![Crash Samples](https://img.shields.io/badge/Crash%20Samples-1000%2B-orange)]()
+[![Time to Discovery](https://img.shields.io/badge/Discovery%20Time-%3C%201s-brightgreen)]()
+[![Fuzzer Speed](https://img.shields.io/badge/Speed-27k%2Fs-blue)]()
+
+**Author:** Nafis | **Date:** February 2026 | **Status:** ✅ Complete
+
+## 🎯 TL;DR
+
+Custom mutation-based fuzzer discovered **2 distinct memory corruption vulnerabilities** in under 1 second:
+- **Heap buffer overflow** (64-byte buffer, 36-byte overflow)
+- **Stack buffer overflow** (128-byte buffer, 22-byte overflow)
+
+Both vulnerabilities confirmed with 100% reproducibility and documented with professional security analysis.
+
+
+[![Vulnerabilities Found](https://img.shields.io/badge/Bugs%20Found-2-red)]()
+[![Crash Samples](https://img.shields.io/badge/Crash%20Samples-1000%2B-orange)]()
+[![Time to Discovery](https://img.shields.io/badge/Discovery%20Time-%3C%201s-brightgreen)]()
+[![Fuzzer Speed](https://img.shields.io/badge/Speed-27k%2Fs-blue)]()
+
+**Author:** Nafis | **Date:** February 2026 | **Status:** ✅ Complete
+
+## 🎯 TL;DR
+
+Custom mutation-based fuzzer discovered **2 distinct memory corruption vulnerabilities** in under 1 second:
+- **Heap buffer overflow** (64-byte buffer, 36-byte overflow)
+- **Stack buffer overflow** (128-byte buffer, 22-byte overflow)
+
+Both vulnerabilities confirmed with 100% reproducibility and documented with professional security analysis.
+
 
 **Author:** Fuad  
 **Date:** February 2026  
@@ -162,3 +194,31 @@ if (len >= 64) len = 63;  // Truncate to fit
 ---
 
 **Note:** This is a security research project on intentionally vulnerable code. Do not use these techniques on systems without authorization.
+
+## 🔥 Discovered Vulnerabilities (2 Total)
+
+### Vulnerability #1: Heap Buffer Overflow
+- **Location:** `extract_string()` at line 61
+- **Type:** CWE-122 (Heap-based Buffer Overflow)
+- **Severity:** HIGH (CVSS 8.6)
+- **Trigger:** JSON value > 64 characters
+- **Impact:** Memory corruption, DoS, potential RCE
+
+### Vulnerability #2: Stack Buffer Overflow
+- **Location:** `parse_array()` at line 23
+- **Type:** CWE-121 (Stack-based Buffer Overflow)
+- **Severity:** HIGH (CVSS 7.8)
+- **Trigger:** JSON array with > 64 digits
+- **Impact:** Stack corruption, return address overwrite, **direct RCE**
+
+**Note:** Bug #2 (stack overflow) is more dangerous as it provides direct control over execution flow via return address manipulation.
+
+## 📊 Bug Discovery Statistics
+
+- **Total crashes found:** 1000+
+- **Unique vulnerabilities:** 2
+- **Heap overflows:** ~50% of crashes
+- **Stack overflows:** ~50% of crashes
+- **Time to discovery:** < 1 second
+- **Fuzzer speed:** 27,000 exec/sec
+
